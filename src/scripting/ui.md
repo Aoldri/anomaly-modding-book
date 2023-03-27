@@ -67,6 +67,8 @@ Example:
 </w>
 ```
 
+Note that the elements are initially drawn at a 1024x768 resolution, then stretched to fit the game resolution. This is why there are `_16` variants of these files, which are used when you play in a 16:9 resolution to compensate for this stretching effect. One application of this is to resize icons to appear square after stretching.
+
 ## Scripts
 
 This is what makes everything work: how buttons respond to clicks, specify what elements are drawn on-screen, and modify the UI components on-the-fly.

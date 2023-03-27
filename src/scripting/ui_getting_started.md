@@ -67,5 +67,5 @@ end
 
 - Throttling the `Update()` function
 
-
+- Script-based solution for UI stretching
 
