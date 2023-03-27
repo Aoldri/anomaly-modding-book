@@ -1,9 +1,8 @@
 # Getting Started
-_Basic skeleton/template of UIs and GUIs_\
-_Best practices like unregistering on close_
 
-## Template
+## Writing the UI Class
 ```lua
+-- ui_example.script
 GUI = nil -- instance, don't touch
 
 class "UIExample" (CUIScriptWnd)
@@ -53,5 +52,20 @@ function UIExample:Close()
 end
 ```
 
-## Texture Descriptions
+## Displaying the UI
+
+
+## Drawing elements
+
+
+## Callbacks
+
+
+## Best Practices
+
+- Unregister on close
+
+- Throttling the `Update()` function
+
+
 

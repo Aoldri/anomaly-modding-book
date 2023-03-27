@@ -38,6 +38,7 @@ ___
   - [Server and game objects](scripting/server_and_game_objects.md)
   - [MCM](scripting/mcm.md)
   - [UI](scripting/ui.md)
+    - [Getting Started](scripting/ui_getting_started.md)
     - [UI classes](scripting/ui_classes.md)
       - [Components](scripting/ui_classes/components.md)
       - [Inputs](scripting/ui_classes/inputs.md)
