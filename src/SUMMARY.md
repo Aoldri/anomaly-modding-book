@@ -37,6 +37,9 @@ ___
   - [Callbacks](scripting/callbacks.md)
   - [Server and game objects](scripting/server_and_game_objects.md)
   - [MCM](scripting/mcm.md)
+  - [UI](scripting/ui.md)
+    - [UI classes](scripting/ui_classes.md)
+  - [Scripted dialogues]()
   - [Script Animations](scripting/script_animations.md)
 
 ___
