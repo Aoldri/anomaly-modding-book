@@ -39,6 +39,10 @@ ___
   - [MCM](scripting/mcm.md)
   - [UI](scripting/ui.md)
     - [UI classes](scripting/ui_classes.md)
+      - [Components](scripting/ui_classes/components.md)
+      - [Inputs](scripting/ui_classes/inputs.md)
+      - [Layout](scripting/ui_classes/layouts.md)
+      - [Undocumented](scripting/ui_classes/undocumented.md)
   - [Scripted dialogues]()
   - [Script Animations](scripting/script_animations.md)
 
