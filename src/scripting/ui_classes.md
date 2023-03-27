@@ -26,6 +26,7 @@ xml:InitCheck("button", self)
 ```
 
 Attributes:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
@@ -47,6 +48,7 @@ XML:
 </btn>
 ```
 Attributes:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 | `x` | 0 | `number` | x coordinate |
@@ -56,6 +58,7 @@ Attributes:
 | `stretch` | 1 | `boolean` | The texture can stretch to fit the size of the button |
 
 Elements:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 | `texture` | "" | `string` | Texture Description ID, determines what texture is drawn on the button |
@@ -91,6 +94,7 @@ xml:InitProgressBar("enemy_health", self)
 ```
 
 Attributes:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
@@ -116,6 +120,7 @@ xml:InitScrollView("tag_select_scroll", self)
 ```
 
 Attributes:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
@@ -139,6 +144,7 @@ xml:InitStatic("button", self)
 ```
 
 Attributes:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 | `x` | 0 | `number` | x coordinate |
@@ -147,12 +153,12 @@ Attributes:
 | `height` | 0 | `number` | x coordinate |
 | `heading_angle` | 0.0 | `number` | Heading |
 | `light_anim` | "" | `string` | Light Anim |
-| `la_cyclic` | 1 | `0\|1` | Flag |
-| `la_text` | 1 | `0\|1` | Flag |
-| `la_texture` | 1 | `0\|1` | Flag |
-| `la_alpha` | 0 | `0\|1` | Flag |
+| `la_cyclic` | 1 | `0`\|`1` | Flag |
+| `la_text` | 1 | `0`\|`1` | Flag |
+| `la_texture` | 1 | `0`\|`1` | Flag |
+| `la_alpha` | 0 | `0`\|`1` | Flag |
 | `xform_anim` | "" | `string` | Flag |
-| `xform_anim_cyclic` | 1 | `0\|1` | Flag |
+| `xform_anim_cyclic` | 1 | `0`\|`1` | Flag |
 | `complex_mode` | false | `boolean` | Flag |
 | `hint` | "" | `string` | Flag |
 
@@ -183,6 +189,7 @@ xml:InitTextWnd("light_duration", self)
 ```
 
 Attributes:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
@@ -203,6 +210,7 @@ xml:InitTrackBar("trackbar", self)
 ```
 
 Attributes:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
@@ -253,6 +261,7 @@ xml:InitFrame("background", self)
 ```
 
 Attributes:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
@@ -281,6 +290,7 @@ xml:InitListBox("listbox", self)
 ```
 
 Attributes:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
@@ -338,6 +348,7 @@ xml:InitComboBox("select", self)
 ```
 
 Attributes:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
@@ -365,6 +376,7 @@ xml:InitEditBox("input", self)
 ```
 
 Attributes:
+
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
