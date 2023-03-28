@@ -1,9 +1,16 @@
 # Inputs
+
+- [Buttons](#buttons)
+- [Combobox](#combobox)
+- [Listbox](#listbox)
+- [Text Field](#text-field)
+- [Slider](#slider)
+
 ## Buttons
 
-```lua
-class CUICheckButton : CUI3tButton
-```
+
+> CUICheckButton : CUI3tButton
+
 XML:
 ```xml
 <autoplay_btn x="256" y="373" width="93" height="22" stretch="1">
@@ -14,28 +21,30 @@ XML:
 </autoplay_btn>
 ```
 
+Attributes:
+
+| Name | Default | Type | Description |
+| --- | --- | --- | --- |
+
 Lua:
 ```lua
 local xml = CScriptXmlInit()
 xml:InitCheck("button", self)
 ```
 
-Attributes:
+Methods:
 
-| Name | Default | Type | Description |
-| --- | --- | --- | --- |
-|  |  |  |  |
+| Returns | Method | Description |
+| --- | --- | --- |
+| boolean | `GetCheck()` |  |  |
+|  | `SetCheck(ch: boolean)` |  |  |
+|  | `SetDependControl(pWnd: CUIWindow)` |  |  |
 
 ---
 
-```lua
-class CUI3tButton : CUIButton
-```
-Lua:
-```lua
-local xml = CScriptXmlInit()
-xml:Init3tButton("button", self)
-```
+
+> CUI3tButton : CUIButton
+
 
 XML:
 ```xml
@@ -53,6 +62,12 @@ Attributes:
 | `height` | 0 | `number` | x coordinate |
 | `stretch` | 1 | `boolean` | The texture can stretch to fit the size of the button |
 
+Lua:
+```lua
+local xml = CScriptXmlInit()
+xml:Init3tButton("button", self)
+```
+
 Elements:
 
 | Name | Default | Type | Description |
@@ -60,9 +75,9 @@ Elements:
 | `texture` | "" | `string` | Texture Description ID, determines what texture is drawn on the button |
 
 ## Combobox
-```
-class CUIComboBox : CUIWindow
-```
+
+> CUIComboBox : CUIWindow
+
 XML:
 ```xml
 <select x="64" y="0" width="160" height="24" can_select="1">
@@ -74,22 +89,23 @@ XML:
 </select>
 ```
 
-Lua:
-```lua
-local xml = CScriptXmlInit()
-xml:InitComboBox("select", self)
-```
-
 Attributes:
 
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
 
+Lua:
+```lua
+local xml = CScriptXmlInit()
+xml:InitComboBox("select", self)
+```
+
+
 ## Listbox
-```
-class CUIListBox : CUIScrollView
-```
+
+> CUIListBox : [CUIScrollView](layouts.md#scrollable-window)
+
 
 XML:
 ```xml
@@ -110,9 +126,9 @@ Attributes:
 
 ## Text Field
 
-```
-class CUIEditBox : CUICustomEdit
-```
+
+> class CUIEditBox : CUICustomEdit
+
 XML:
 ```xml
 <input x="12" y="20" width="160" height="30" stretch="1">
@@ -121,10 +137,35 @@ XML:
 </input>
 ```
 
+Attributes:
+
+| Name | Default | Type | Description |
+| --- | --- | --- | --- |
+|  |  |  |  |
+
 Lua:
 ```lua
 local xml = CScriptXmlInit()
 xml:InitEditBox("input", self)
+```
+
+Methods:
+
+| Returns | Method | Description |
+| --- | --- | --- |
+|  | `SetText(str: string)` |  |
+| `string` | `GetText()` |  |
+|  | `CaptureFocus(bCapture: boolean)` |  |
+|  | `SetNextFocusCapturer(next_capturer: CUICustomEdit)` |  |
+|  | `InitTexture(texture: string)` |  |
+
+## Slider
+
+> CUITrackBar : [CUIWindow](layouts.md#window)
+
+XML:
+```xml
+<trackbar x="64" y="4" width="140" height="16" stretch="1"/>
 ```
 
 Attributes:
@@ -132,15 +173,6 @@ Attributes:
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
-
-## Slider
-```
-class CUITrackBar : CUIWindow
-```
-XML:
-```xml
-<trackbar x="64" y="4" width="140" height="16" stretch="1"/>
-```
 
 Lua:
 ```lua
@@ -148,8 +180,19 @@ local xml = CScriptXmlInit()
 xml:InitTrackBar("trackbar", self)
 ```
 
-Attributes:
+Methods:
 
-| Name | Default | Type | Description |
-| --- | --- | --- | --- |
-|  |  |  |  |
+| Returns | Method | Description |
+| --- | --- | --- |
+|  | `GetCheck()` |  |
+|  | `SetCheck()` |  |
+|  | `GetIValue()` |  |
+|  | `GetFValue()` |  |
+|  | `SetIValue()` |  |
+|  | `SetFValue()` |  |
+|  | `SetStep()` |  |
+|  | `GetInvert()` |  |
+|  | `SetInvert()` |  |
+|  | `SetOptIBounds()` |  |
+|  | `SetOptFBounds()` |  |
+|  | `SetCurrentValue()` |  |

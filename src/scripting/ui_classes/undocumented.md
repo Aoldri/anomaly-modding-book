@@ -1,107 +1,72 @@
 # Undocumented
 
+- [NPC Dialog Window](#npc-dialog-window)
+- [Scripted Window](#scripted-window)
+- [Property Box](#property-box)
+- [Tabs](#tabs)
+- [Sleep Static](#sleep-static)
+- [Spin (???)](#spin-)
+- [Frame Line Window](#frame-line-window)
+- [Custom Game](#custom-game)
+- [Text](#text)
+- [MMShniaga](#mmshniaga)
+- [Maps](#maps)
+- [Message Box](#message-box)
+- [Edit Box](#edit-box)
+
 ## NPC Dialog Window
-```
-class CUIDialogWnd : CUIWindow
-```
+> CUIDialogWnd : CUIWindow
 
 ## Scripted Window
-```
-class CUIScriptWnd : CUIDialogWnd
-```
+> CUIScriptWnd : CUIDialogWnd
 
 ## Property Box
-```
-class CUIPropertiesBox : CUIFrameWindow
-```
+> CUIPropertiesBox : CUIFrameWindow
 
 ## Tabs
-```
-class CUITabButton : CUIButton
-```
+> CUITabButton : CUIButton
 
-```
-class CUITabControl : CUIWindow
-```
-
-## Window
-```
-class CUIWindow
-```
+> CUITabControl : CUIWindow
 
 ## Sleep Static
-```
-class CUISleepStatic : CUIStatic
-```
+> CUISleepStatic : CUIStatic
 
 ## Spin (???)
-```
-class CUICustomSpin : CUIWindow
-```
+> CUICustomSpin : CUIWindow
 
-```
-class CUISpinFlt : CUICustomSpin
-```
+> CUISpinFlt : CUICustomSpin
 
-```
-class CUISpinNum : CUICustomSpin
-```
+> CUISpinNum : CUICustomSpin
 
-```
-class CUISpinText : CUICustomSpin
-```
+> CUISpinText : CUICustomSpin
 
-## ???
-```
-class CUIFrameLineWnd : CUIWindow
-```
+## Frame Line Window
+> CUIFrameLineWnd : CUIWindow
 
-## ???
-```
-class CUIGameCustom
-```
+## Custom Game
+> CUIGameCustom
 
-## ???
-```
-class CUILines
-```
+## Text
+> CUILines
 
-```
-class CUIListBoxItem : CUIFrameLineWnd
-```
+> CUIListBoxItem : CUIFrameLineWnd
 
-```
-class CUIListBoxItemMsgChain : CUIListBoxItem
-```
+> CUIListBoxItemMsgChain : CUIListBoxItem
 
-## ???
-```
-class CUIMMShniaga : CUIWindow
-```
+## MMShniaga
+> CUIMMShniaga : CUIWindow
 
-## ???
-```
-class CUIMapInfo : CUIWindow
-```
+## Maps
+> CUIMapInfo : CUIWindow
 
-```
-class CUIMapList : CUIWindow
-```
+> CUIMapList : CUIWindow
 
 ## Message Box
-```
-class CUIMessageBox : CUIStatic
-```
+> CUIMessageBox : CUIStatic
 
-```
-class CUIMessageBoxEx : CUIDialogWnd
-```
+> CUIMessageBoxEx : CUIDialogWnd
 
 ## Edit Box
-```
-class CUICustomEdit : CUIWindow
-```
+> CUICustomEdit : CUIWindow
 
-```
-class CUIEditBoxEx : CUICustomEdit
-```
+> CUIEditBoxEx : CUICustomEdit
