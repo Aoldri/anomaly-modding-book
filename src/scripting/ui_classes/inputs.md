@@ -1,15 +1,39 @@
 # Inputs
 
-- [Buttons](#buttons)
+- [Button](#button)
+- [Checkbox](#checkbox)
 - [Combobox](#combobox)
 - [Listbox](#listbox)
 - [Text Field](#text-field)
 - [Slider](#slider)
 
-## Buttons
+## Button
 
+> CUI3tButton : CUIButton
 
-> CUICheckButton : CUI3tButton
+XML:
+```xml
+<btn x="" y="" width="" height="" stretch="1">
+    <texture></texture>
+</btn>
+```
+Attributes:
+
+| Name | Default | Type | Description |
+| --- | --- | --- | --- |
+| `frame_mode` | `0` | `0`\|`1` | Initialises and attaches a [Frame Line Window](undocumented.md#frame-line-window) to the button. |
+| `vertical` | `0` | `0`\|`1` | ??? |
+| `hint` |  | `string` | Displays translated text when the mouse cursor hovers over the button. |
+
+Lua:
+```lua
+local xml = CScriptXmlInit()
+xml:Init3tButton("button", self)
+```
+
+## Checkbox
+
+> CUICheckButton : [CUI3tButton](#button)
 
 XML:
 ```xml
@@ -42,30 +66,6 @@ Methods:
 |  | `SetDependControl(pWnd: CUIWindow)` | Enables or disables `pWnd` depending on if the checkbox is checked or unchecked respectively. | 
 
 ---
-
-
-> CUI3tButton : CUIButton
-
-
-XML:
-```xml
-<btn x="" y="" width="" height="" stretch="1">
-    <texture></texture>
-</btn>
-```
-Attributes:
-
-| Name | Default | Type | Description |
-| --- | --- | --- | --- |
-| `frame_mode` | `0` | `0`\|`1` | Initialises and attaches a [Frame Line Window](undocumented.md#frame-line-window) to the button. |
-| `vertical` | `0` | `0`\|`1` | ??? |
-| `hint` |  | `string` | Displays translated text when the mouse cursor hovers over the button. |
-
-Lua:
-```lua
-local xml = CScriptXmlInit()
-xml:Init3tButton("button", self)
-```
 
 ## Combobox
 
