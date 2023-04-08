@@ -25,6 +25,7 @@ Attributes:
 
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
+|  |  |  |  |
 
 Lua:
 ```lua
@@ -36,9 +37,9 @@ Methods:
 
 | Returns | Method | Description |
 | --- | --- | --- |
-| boolean | `GetCheck()` |  |  |
-|  | `SetCheck(ch: boolean)` |  |  |
-|  | `SetDependControl(pWnd: CUIWindow)` |  |  |
+| `boolean` | `GetCheck()` | Returns `true` if the checkbox is checked.   | 
+|  | `SetCheck(ch: boolean)` | Checks the checkbox if `ch` is `true`, and unchecks if it is `false`.  | 
+|  | `SetDependControl(pWnd: CUIWindow)` | Enables or disables `pWnd` depending on if the checkbox is checked or unchecked respectively. | 
 
 ---
 
@@ -56,11 +57,9 @@ Attributes:
 
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
-| `x` | 0 | `number` | x coordinate |
-| `y` | 0 | `number` | y coordinate |
-| `width` | 0 | `number` | width |
-| `height` | 0 | `number` | x coordinate |
-| `stretch` | 1 | `boolean` | The texture can stretch to fit the size of the button |
+| `frame_mode` | `0` | `0`\|`1` | Initialises and attaches a [Frame Line Window](undocumented.md#frame-line-window) to the button. |
+| `vertical` | `0` | `0`\|`1` | ??? |
+| `hint` |  | `string` | Displays translated text when the mouse cursor hovers over the button. |
 
 Lua:
 ```lua
@@ -68,15 +67,9 @@ local xml = CScriptXmlInit()
 xml:Init3tButton("button", self)
 ```
 
-Elements:
-
-| Name | Default | Type | Description |
-| --- | --- | --- | --- |
-| `texture` | "" | `string` | Texture Description ID, determines what texture is drawn on the button |
-
 ## Combobox
 
-> CUIComboBox : CUIWindow
+> CUIComboBox : [CUIWindow](layouts.md#window)
 
 XML:
 ```xml
@@ -93,7 +86,8 @@ Attributes:
 
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
-|  |  |  |  |
+| `list_length` | `4` | `number` | Determines length of the list displayed after clicking. |
+| `always_show_scroll` | `1` | `0`\|`1` | If set to `1`, the scroll bar is always visible even if scrolling is not needed. |
 
 Lua:
 ```lua
@@ -112,17 +106,33 @@ XML:
 <listbox x="28" y="150" width="764" height="558" can_select="0" always_show_scroll="1" stretch="1"/>
 ```
 
+Attributes:
+
+| Name | Default | Type | Description |
+| --- | --- | --- | --- |
+| `item_height` | 20.0 | `number` | Determines the height of each item in the list box. |
+
 Lua:
 ```lua
 local xml = CScriptXmlInit()
 xml:InitListBox("listbox", self)
 ```
 
-Attributes:
-
-| Name | Default | Type | Description |
-| --- | --- | --- | --- |
-|  |  |  |  |
+| Returns | Method | Description |
+| --- | --- | --- |
+|  | `ShowSelectedItem()` | Displays the currently selected item in the list box. |
+|  | `RemoveAll()` | Removes all items from the list box. |
+| `number` | `GetSize()` | Returns the number of items in the list box. |
+| `CUIListBoxItem` | `GetSelectedItem()` | Returns the currently selected item in the list box. |
+| `number` | `GetSelectedIndex()` | Returns the index of the currently selected item in the list box. |
+|  | `SetSelectedIndex(index: number)` | Sets the currently selected item in the list box to the item at the specified index. |
+|  | `SetItemHeight(height: number)` | Sets the height of each item in the list box. |
+| `number` | `GetItemHeight()` | Returns the height of each item in the list box. |
+| `CUIListBoxItem` | `GetItemByIndex()` | Returns the item at the specified index in the list box. |
+| `CUIListBoxItem` | `GetItem()` | Returns the item with the specified text in the list box. |
+|  | `RemoveItem()` | Removes the specified item from the list box. |
+| `CUIListBoxItem` | `AddTextItem(text: string)` | Adds a new item with the specified text to the list box. |
+|  | `AddExistingItem(item: CUIListBoxItem)` | Adds an existing item to the list box. |
 
 ## Text Field
 
@@ -153,11 +163,11 @@ Methods:
 
 | Returns | Method | Description |
 | --- | --- | --- |
-|  | `SetText(str: string)` |  |
-| `string` | `GetText()` |  |
-|  | `CaptureFocus(bCapture: boolean)` |  |
-|  | `SetNextFocusCapturer(next_capturer: CUICustomEdit)` |  |
-|  | `InitTexture(texture: string)` |  |
+|  | `SetText(str: string)` | Sets the text of the text field to the specified string. |
+| `string` | `GetText()` | Returns the current text in the text field as a string. |
+|  | `CaptureFocus(bCapture: boolean)` | Captures or releases focus for the text field. When focus is captured, the text field receives all keyboard input until focus is released. |
+|  | `SetNextFocusCapturer(next_capturer: CUICustomEdit)` | Sets the next UI element that will capture focus after this text field. |
+|  | `InitTexture(texture: string)` | Initializes the texture used for rendering the text field. |
 
 ## Slider
 
@@ -184,15 +194,15 @@ Methods:
 
 | Returns | Method | Description |
 | --- | --- | --- |
-|  | `GetCheck()` |  |
-|  | `SetCheck()` |  |
-|  | `GetIValue()` |  |
-|  | `GetFValue()` |  |
-|  | `SetIValue()` |  |
-|  | `SetFValue()` |  |
-|  | `SetStep()` |  |
-|  | `GetInvert()` |  |
-|  | `SetInvert()` |  |
-|  | `SetOptIBounds()` |  |
-|  | `SetOptFBounds()` |  |
-|  | `SetCurrentValue()` |  |
+| `boolean` | `GetCheck()` | Returns `true` if the slider is checked; otherwise, returns `false`. |
+|  | `SetCheck(b: boolean)` | Sets the slider check state to `true` if b is `true`; otherwise, sets it to `false`. |
+| `number` | `GetIValue()` | Returns the integer value of the slider. |
+| `number` | `GetFValue()` | Returns the floating-point value of the slider. |
+|  | `SetIValue(i: number)` | Sets the integer value of the slider to `i`. |
+|  | `SetFValue(f: number)` | Sets the floating-point value of the slider to `f`. |
+|  | `SetStep(step: number)` | Sets the step increment of the slider to `step`. |
+| `boolean` | `GetInvert()` | Returns `true` if the slider is inverted; otherwise, returns `false`. |
+|  | `SetInvert(v: boolean)` | Sets the slider to be inverted if `v` is `true`; otherwise, sets it to be normal. |
+|  | `SetOptIBounds(imin: number, imax: number)` | Sets the integer bounds of the slider to `imin` and `imax`. |
+|  | `SetOptFBounds(fmin: number, fmax: number)` | Sets the floating-point bounds of the slider to `fmin` and `fmax`. |
+|  | `SetCurrentValue()` | Sets the current value of the slider based on its position. |
