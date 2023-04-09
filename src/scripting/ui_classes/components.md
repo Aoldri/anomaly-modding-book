@@ -33,6 +33,9 @@ Attributes:
 | `complex_mode` | false | `boolean` | Whether to enable complex mode for the Static element. |
 | `hint` | "" | `string` | The tooltip text to display when the mouse cursor hovers over the Static element. |
 
+Child Elements:
+- [`<text>`](subelements.md#text)
+
 Lua:
 ```lua
 local xml = CScriptXmlInit()
@@ -77,6 +80,9 @@ Attributes:
 | --- | --- | --- | --- |
 |  |  |  |  |
 
+Child Elements:
+- [`<text>`](subelements.md#text)
+
 Lua:
 ```lua
 local xml = CScriptXmlInit()
@@ -120,6 +126,13 @@ Attributes:
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
+
+Child Elements:
+- [`<progress>`](#static)
+- [`<background>`](#static)
+- [`<min_color>`](subelements.md#colour)
+- [`<middle_color>`](subelements.md#colour)
+- [`<max_color>`](subelements.md#colour)
 
 Lua:
 ```lua

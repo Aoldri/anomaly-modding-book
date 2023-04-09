@@ -25,6 +25,15 @@ Attributes:
 | `vertical` | `0` | `0`\|`1` | ??? |
 | `hint` |  | `string` | Displays translated text when the mouse cursor hovers over the button. |
 
+Child Elements:
+- [`<texture>`](subelements.md#texture): Texture of button, requires variants with the suffixes `_e`, `_d`, `_t`, `_h` for enabled, disabled, touched, and highlighted states respectively.
+- [`<text>`](subelements.md#text): String ID to display localised text
+- `<text_color>`
+  - [`<e>`](subelements.md#colour): Colour of text when the button is enabled
+  - [`<d>`](subelements.md#colour): Colour of text when the button is disabled
+  - [`<t>`](subelements.md#colour): Colour of text when the button is touched
+  - [`<h>`](subelements.md#colour): Colour of text when the button is highlighted
+
 Lua:
 ```lua
 local xml = CScriptXmlInit()
@@ -51,6 +60,14 @@ Attributes:
 | --- | --- | --- | --- |
 |  |  |  |  |
 
+Child Elements:
+- [`<texture>`](subelements.md#texture): Texture of checkbox, defaults to `ui_checker`
+- `<text_color>`
+  - [`<e>`](subelements.md#colour): Colour of text when the button is enabled
+  - [`<d>`](subelements.md#colour): Colour of text when the button is disabled
+  - [`<t>`](subelements.md#colour): Colour of text when the button is touched
+  - [`<h>`](subelements.md#colour): Colour of text when the button is highlighted
+
 Lua:
 ```lua
 local xml = CScriptXmlInit()
@@ -64,8 +81,6 @@ Methods:
 | `boolean` | `GetCheck()` | Returns `true` if the checkbox is checked.   | 
 |  | `SetCheck(ch: boolean)` | Checks the checkbox if `ch` is `true`, and unchecks if it is `false`.  | 
 |  | `SetDependControl(pWnd: CUIWindow)` | Enables or disables `pWnd` depending on if the checkbox is checked or unchecked respectively. | 
-
----
 
 ## Combobox
 
@@ -89,6 +104,12 @@ Attributes:
 | `list_length` | `4` | `number` | Determines length of the list displayed after clicking. |
 | `always_show_scroll` | `1` | `0`\|`1` | If set to `1`, the scroll bar is always visible even if scrolling is not needed. |
 
+Child Elements:
+- [`<list_font>`](subelements.md#font): Determines the [font](subelements.md#font) and [colour](subelements.md#colour) of the list
+- `<text_color>`
+  - [`<e>`](subelements.md#colour): Colour of text when the item is enabled
+  - [`<d>`](subelements.md#colour): Colour of text when the item is disabled
+
 Lua:
 ```lua
 local xml = CScriptXmlInit()
@@ -111,6 +132,9 @@ Attributes:
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 | `item_height` | 20.0 | `number` | Determines the height of each item in the list box. |
+
+Child Elements:
+- [`<font>`](subelements.md#font): Determines the [font](subelements.md#font) and [colour](subelements.md#colour) of the text
 
 Lua:
 ```lua
@@ -153,6 +177,11 @@ Attributes:
 | --- | --- | --- | --- |
 |  |  |  |  |
 
+Child Elements:
+- [`<texture>`](subelements.md#texture)
+- `<text_color>`
+  - [`<e>`](subelements.md#colour): Text colour
+
 Lua:
 ```lua
 local xml = CScriptXmlInit()
@@ -182,7 +211,9 @@ Attributes:
 
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
-|  |  |  |  |
+| `is_integer` | `0` | `0`\|`1` |  |
+| `invert` | `0` | `0`\|`1` |  |
+| `step` | 0.1 | `number` |  |
 
 Lua:
 ```lua

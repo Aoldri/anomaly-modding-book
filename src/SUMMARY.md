@@ -43,6 +43,7 @@ ___
       - [Components](scripting/ui_classes/components.md)
       - [Inputs](scripting/ui_classes/inputs.md)
       - [Layout](scripting/ui_classes/layouts.md)
+      - [Subelements](scripting/ui_classes/subelements.md)
       - [Undocumented](scripting/ui_classes/undocumented.md)
   - [Scripted dialogues]()
   - [Script Animations](scripting/script_animations.md)

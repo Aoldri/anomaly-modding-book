@@ -22,6 +22,9 @@ Attributes:
 | `width` | 0 | `number` | The width of the Window element in pixels. |
 | `height` | 0 | `number` | The height of the Window element in pixels. |
 
+Child Elements:
+- `<window_name>`
+
 Lua:
 ```lua
 local xml = CScriptXmlInit()
@@ -78,6 +81,9 @@ Attributes:
 | `always_show_scroll` | 1 | `0`\|`1` | If set to `1`, the scroll bar is always visible even if scrolling is not needed. |
 | `can_select` | 0 | `0`\|`1` | If set to `1`, the child windows of the scrolling window can be selected. |
 
+Child Elements:
+- [`<text>`](components.md#text): Can have multiple `<text>` elements as children to insert into the window.
+
 Lua:
 ```lua
 local xml = CScriptXmlInit()
@@ -115,6 +121,17 @@ Attributes:
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
 |  |  |  |  |
+
+Child Elements:
+- [`<texture>`](subelements.md#texture): Texture of Frame Window, dynamically scaling to fit its dimensions
+
+Note that this layout expects 9 variants of the provided Texture ID, each with a unique suffix to denote their respective positions in a 3x3 grid:
+
+|  |  |  |
+| --- | --- | --- |
+| `_lt` | `_t` | `_rt` |
+| `_l` | `_back` | `_r` |
+| `_lb` | `_b` | `_rb` |
 
 Lua:
 ```lua
