@@ -5,7 +5,7 @@
 - [Progress Bar](#progress-bar)
 
 ## Static
-> class CUIStatic : [CUIWindow](layouts.md#window)
+> CUIStatic : [CUIWindow](layouts.md#window)
 
 XML:
 ```xml
@@ -62,7 +62,7 @@ Methods:
 
 ## Text
 
-> class CUITextWnd : [CUIWindow](layouts.md#window)
+> CUITextWnd : [CUIWindow](layouts.md#window)
 
 XML:
 ```xml

@@ -6,7 +6,7 @@
 
 ## Window
 
-> class CUIWindow
+> CUIWindow
 
 XML:
 ```xml

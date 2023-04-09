@@ -15,33 +15,33 @@
 - [Edit Box](#edit-box)
 
 ## NPC Dialog Window
-> CUIDialogWnd : CUIWindow
+> CUIDialogWnd : [CUIWindow](layouts.md#window)
 
 ## Scripted Window
-> CUIScriptWnd : CUIDialogWnd
+> CUIScriptWnd : [CUIDialogWnd](#npc-dialog-window)
 
 ## Property Box
-> CUIPropertiesBox : CUIFrameWindow
+> CUIPropertiesBox : [CUIFrameWindow](layouts.md#frame-window)
 
 ## Tabs
-> CUITabButton : CUIButton
+> CUITabButton : [CUIButton](#button)
 
-> CUITabControl : CUIWindow
+> CUITabControl : [CUIWindow](layouts.md#window)
 
 ## Sleep Static
-> CUISleepStatic : CUIStatic
+> CUISleepStatic : [CUIStatic](components.md#static)
 
 ## Spin (???)
-> CUICustomSpin : CUIWindow
+> CUICustomSpin : [CUIWindow](layouts.md#window)
 
-> CUISpinFlt : CUICustomSpin
+> CUISpinFlt : [CUICustomSpin](#spin)
 
-> CUISpinNum : CUICustomSpin
+> CUISpinNum : [CUICustomSpin](#spin)
 
-> CUISpinText : CUICustomSpin
+> CUISpinText : [CUICustomSpin](#spin)
 
 ## Frame Line Window
-> CUIFrameLineWnd : CUIWindow
+> CUIFrameLineWnd : [CUIWindow](layouts.md#window)
 
 ## Custom Game
 > CUIGameCustom
@@ -49,24 +49,27 @@
 ## Text
 > CUILines
 
-> CUIListBoxItem : CUIFrameLineWnd
+> CUIListBoxItem : [CUIFrameLineWnd](#frame-line-window)
 
-> CUIListBoxItemMsgChain : CUIListBoxItem
+> CUIListBoxItemMsgChain : [CUIListBoxItem](#text)
 
 ## MMShniaga
-> CUIMMShniaga : CUIWindow
+> CUIMMShniaga : [CUIWindow](layouts.md#window)
 
 ## Maps
-> CUIMapInfo : CUIWindow
+> CUIMapInfo : [CUIWindow](layouts.md#window)
 
-> CUIMapList : CUIWindow
+> CUIMapList : [CUIWindow](layouts.md#window)
 
 ## Message Box
-> CUIMessageBox : CUIStatic
+> CUIMessageBox : [CUIStatic](components.md#static)
 
-> CUIMessageBoxEx : CUIDialogWnd
+> CUIMessageBoxEx : [CUIDialogWnd](#npc-dialog-window)
 
 ## Edit Box
-> CUICustomEdit : CUIWindow
+> CUICustomEdit : [CUIWindow](layouts.md#window)
 
 > CUIEditBoxEx : CUICustomEdit
+
+## Button
+> CUIButton : [CUIStatic](components.md#static)

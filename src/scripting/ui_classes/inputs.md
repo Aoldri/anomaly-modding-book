@@ -9,7 +9,7 @@
 
 ## Button
 
-> CUI3tButton : CUIButton
+> CUI3tButton : [CUIButton](undocumented.md#button)
 
 XML:
 ```xml
@@ -158,7 +158,7 @@ xml:InitListBox("listbox", self)
 ## Text Field
 
 
-> class CUIEditBox : CUICustomEdit
+> CUIEditBox : [CUICustomEdit](undocumented.md#edit-box)
 
 XML:
 ```xml
