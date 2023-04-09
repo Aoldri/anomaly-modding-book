@@ -117,10 +117,7 @@ XML:
 ```
 
 Attributes:
-
-| Name | Default | Type | Description |
-| --- | --- | --- | --- |
-|  |  |  |  |
+Nothing unique to Frame Window.
 
 Child Elements:
 - [`<texture>`](subelements.md#texture): Texture of Frame Window, dynamically scaling to fit its dimensions

@@ -55,10 +55,7 @@ XML:
 ```
 
 Attributes:
-
-| Name | Default | Type | Description |
-| --- | --- | --- | --- |
-|  |  |  |  |
+Nothing unique to Checkbox.
 
 Child Elements:
 - [`<texture>`](subelements.md#texture): Texture of checkbox, defaults to `ui_checker`
@@ -175,7 +172,11 @@ Attributes:
 
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
-|  |  |  |  |
+| `max_symb_count` |  | `number` | Determines the maximum number of characters allowed in the text field. Defaults to `32` if `num_only`, `read_only`, or `file_name_mode` are defined. |
+| `num_only` | `0` | `0`\|`1` | Restricts allowed characters to only numbers. |
+| `read_only` | `0` | `0`\|`1` | Makes the text field read-only. |
+| `file_name_mode` | `0` | `0`\|`1` | Prevents the use of symbols in the text field. |
+| `password` | `0` | `0`\|`1` | Hides text as asterisks. |
 
 Child Elements:
 - [`<texture>`](subelements.md#texture)
@@ -211,9 +212,9 @@ Attributes:
 
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
-| `is_integer` | `0` | `0`\|`1` |  |
-| `invert` | `0` | `0`\|`1` |  |
-| `step` | 0.1 | `number` |  |
+| `is_integer` | `0` | `0`\|`1` | Determines if the values of the slider is given in integers or floating point values. |
+| `invert` | `0` | `0`\|`1` | Inverts change in increment for both mouse and scroll wheel. |
+| `step` | 0.1 | `number` | Determines increment size of the slider. |
 
 Lua:
 ```lua
@@ -225,8 +226,8 @@ Methods:
 
 | Returns | Method | Description |
 | --- | --- | --- |
-| `boolean` | `GetCheck()` | Returns `true` if the slider is checked; otherwise, returns `false`. |
-|  | `SetCheck(b: boolean)` | Sets the slider check state to `true` if b is `true`; otherwise, sets it to `false`. |
+| `boolean` | `GetCheck()` | Returns `true` if the slider is checked; otherwise, returns `false`.<br>`is_integer` must be set to `1`. |
+|  | `SetCheck(b: boolean)` | Sets the slider to maximum value if b is `true`; otherwise, sets it to minimum value.<br>`is_integer` must be set to `1`. |
 | `number` | `GetIValue()` | Returns the integer value of the slider. |
 | `number` | `GetFValue()` | Returns the floating-point value of the slider. |
 |  | `SetIValue(i: number)` | Sets the integer value of the slider to `i`. |

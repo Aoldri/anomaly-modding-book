@@ -18,10 +18,6 @@ Attributes:
 
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
-| `x` | 0 | `number` | The horizontal position of the top-left corner of the Static element in pixels. |
-| `y` | 0 | `number` | The vertical position of the top-left corner of the Static element in pixels. |
-| `width` | 0 | `number` | The width of the Static element in pixels. |
-| `height` | 0 | `number` | The height of the Static element in pixels. |
 | `heading_angle` | 0.0 | `number` | The angle (in degrees) by which to rotate the Static element clockwise. |
 | `light_anim` | "" | `string` | The name of the light animation to use for the Static element. |
 | `la_cyclic` | 1 | `0`\|`1` | Whether the light animation should repeat in a cycle or stop after one iteration. |
@@ -34,6 +30,7 @@ Attributes:
 | `hint` | "" | `string` | The tooltip text to display when the mouse cursor hovers over the Static element. |
 
 Child Elements:
+- [`<texture>`](subelements.md#texture)
 - [`<text>`](subelements.md#text)
 
 Lua:
@@ -78,7 +75,9 @@ Attributes:
 
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
-|  |  |  |  |
+| `light_anim` | "" | `string` | The name of the light animation to use for the Text element. |
+| `la_cyclic` | 1 | `0`\|`1` | Whether the light animation should repeat in a cycle or stop after one iteration. |
+| `la_alpha` | 0 | `0`\|`1` | Whether the light animation should affect the alpha channel of the Static element if one is present. |
 
 Child Elements:
 - [`<text>`](subelements.md#text)
@@ -93,20 +92,20 @@ Methods:
 
 | Returns | Method | Description |
 | --- | --- | --- |
-|  | `AdjustHeightToText()` | |
-|  | `AdjustWidthToText()` | |
-|  | `SetText(txt: string)` | |
-|  | `SetTextST(txt: string)` | |
-| `string` | `GetText()` | |
-|  | `SetFont(font: CGameFont)` | |
-| `CGameFont` | `GetFont()` | |
-|  | `SetTextColor(color: ARGB)` | |
-| `ARGB` | `GetTextColor()` | |
-|  | `SetTextComplexMode(mode: boolean)` | |
-|  | `SetTextAlignment(al: enum)` | Enums:<br/>`0` - Left<br/>`1` - Right<br/>`2` - Center|
-|  | `SetVTextAlignment(al: enum)` | Enums:<br/>`0` - Top<br/>`1` - Center<br/>`2` - Bottom |
-|  | `SetEllipsis(mode: boolean)` | |
-|  | `SetTextOffset(x: number, y: number)` | |
+|  | `AdjustHeightToText()` | Adjusts the height of the text window to fit the current text. |
+|  | `AdjustWidthToText()` | Adjusts the width of the text window to fit the current text. |
+|  | `SetText(txt: string)` | Sets the text of the window to the specified string. |
+|  | `SetTextST(txt: string)` | Sets the text of the window to the specified string and clears the window's format. |
+| `string` | `GetText()` | Returns the current text of the window. |
+|  | `SetFont(font: CGameFont)` | Sets the font of the text window to the specified `font`. |
+| `CGameFont` | `GetFont()` | Returns the current font of the text window. |
+|  | `SetTextColor(color: ARGB)` | Sets the text color of the window to the specified `color`. |
+| `ARGB` | `GetTextColor()` | Returns the current text color of the window. |
+|  | `SetTextComplexMode(mode: boolean)` | Enables or disables complex text mode for the window. |
+|  | `SetTextAlignment(al: enum)` | Sets the horizontal alignment of the text in the window.<br>Enums:<br/>`0` - Left<br/>`1` - Right<br/>`2` - Center|
+|  | `SetVTextAlignment(al: enum)` | Sets the vertical alignment of the text in the window.<br>Enums:<br/>`0` - Top<br/>`1` - Center<br/>`2` - Bottom |
+|  | `SetEllipsis(mode: boolean)` | Enables or disables ellipsis mode for the window. |
+|  | `SetTextOffset(x: number, y: number)` | Sets the offset for the text in the window by the specified `x` and `y` values. |
 
 ## Progress Bar
 
@@ -125,7 +124,12 @@ Attributes:
 
 | Name | Default | Type | Description |
 | --- | --- | --- | --- |
-|  |  |  |  |
+| `min` |  | `number` | Minimum value of the progress bar |
+| `max` |  | `number` | Maximum value of the progress bar |
+| `pos` |  | `number` | Current value of the progress bar |
+| `inertion` | 0.0 | `0.0`-`1.0` | Applies inertia to how quickly the progress bar visually updates to the new value. |
+| `horz` | `0` | `0`\|`1` | Sets the mode of the progress bar to be horizontal if set to `1`. |
+| `mode` | `horz` |  | An alternative to `horz`: sets the mode of the progress bar.<br>Enums:<br/>`horz` - Horizontal<br/>`vert` - Vertical<br/>`back` - Back(?)<br>`down` - Down(?) |
 
 Child Elements:
 - [`<progress>`](#static)
